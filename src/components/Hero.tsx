@@ -22,18 +22,23 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-white">Cris Academia</span>
           </h1>
-          <h2 className="text-2xl md:text-4xl font-light mb-6">
-            Transformando <span className="text-blue-800 font-semibold">Saúde</span> em <span className="text-blue-800 font-semibold">Movimento</span>
+          <h2 className="text-blue-500 font-semibold text-2xl md:text-4xl mb-6 italic animate-pulse">
+            "Viver é Presente!"
           </h2>
+          <h2 className="text-2xl md:text-4xl font-light mb-6">
+            Corpo em <span className="text-blue-500 font-semibold">Movimento</span>, vida em <span className="text-blue-500 font-semibold">Transformação</span>
+          </h2>
+          {/**Primeira academia da região com foco em saúde integral — combinando estética e reabilitação para todas as idades e condições físicas. */}
           <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Primeira academia da região com foco em saúde integral — combinando estética e reabilitação para todas as idades e condições físicas.
+            Pioneira na região em saúde integral, combinando estética e reabilitação para todas as idades e condições físicas
+           
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-12">
             <a 
               href="#planos" 
               className="bg-blue-800 hover:bg-blue-900 text-white py-3 px-8 rounded-full font-medium text-lg transition-all duration-300 transform hover:scale-105"
             >
-              Garanta sua Vaga e Matricule-se Já!
+              Matricule-se Já!
             </a>
             <a 
               href="#contato" 
