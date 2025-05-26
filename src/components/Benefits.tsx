@@ -26,7 +26,7 @@ const Benefits = () => {
     },
     {
       icon: <ListChecks className="w-12 h-12 text-blue-800 mb-4" />,
-      title: "Programas Personalizados",
+      title: "Treinos Personalizados",
       description: "Planilhas de treino sob medida para seus objetivos, com ajustes contínuos conforme sua evolução."
     },
     {
