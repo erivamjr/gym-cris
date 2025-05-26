@@ -30,7 +30,7 @@ const Hero = () => {
           </h2>
           {/**Primeira academia da região com foco em saúde integral — combinando estética e reabilitação para todas as idades e condições físicas. */}
           <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Pioneira na região em saúde integral, combinando estética e reabilitação para todas as idades e condições físicas
+            Pioneira na região em saúde integral, atendendo todas as idades e condições físicas
            
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-12">

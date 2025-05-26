@@ -7,12 +7,12 @@ const Benefits = () => {
     {
       icon: <Heart className="w-12 h-12 text-blue-800 mb-4" />,
       title: "Saúde Integral",
-      description: "Programas que integram estética, reabilitação e bem-estar físico e mental."
+      description: "Planos completos que unem saúde e bem-estar para transformar seu dia a dia."
     },
     {
       icon: <Award className="w-12 h-12 text-blue-800 mb-4" />,
       title: "Mais de 20 Anos",
-      description: "Experiência em treinos clínicos e estéticos para todas as idades e necessidades."
+      description: "Expertise em elaborar treinos personalizados para todas as idades, alinhados a objetivos e limitações individuais."
     },
     {
       icon: <Clock className="w-12 h-12 text-blue-800 mb-4" />,
@@ -27,7 +27,7 @@ const Benefits = () => {
     {
       icon: <ListChecks className="w-12 h-12 text-blue-800 mb-4" />,
       title: "Programas Personalizados",
-      description: "Treinos adaptados para cada condição: lesões, mobilidade reduzida, pós-cirúrgico ou avançado."
+      description: "Planilhas de treino sob medida para seus objetivos, com ajustes contínuos conforme sua evolução."
     },
     {
       icon: <Trophy className="w-12 h-12 text-blue-800 mb-4" />,
