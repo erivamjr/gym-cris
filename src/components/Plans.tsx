@@ -9,7 +9,7 @@ const Plans = () => {
   const plans = [
     {
       name: "Plano Essencial",
-      price: isAnnual ? 95 : 105,
+      price: isAnnual ? 90 : 100,
       description: "Ideal para quem busca os benefícios essenciais da atividade física.",
       features: [
         { name: "Acesso 4/semana", included: true },

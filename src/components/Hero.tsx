@@ -44,7 +44,7 @@ const Hero = () => {
               href="#contato" 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black py-3 px-8 rounded-full font-medium text-lg transition-all duration-300"
             >
-              Agende sua Avaliação Grátis
+              Agende sua Avaliação!
             </a>
           </div>
           <div className="text-gray-400 flex justify-center items-center">
