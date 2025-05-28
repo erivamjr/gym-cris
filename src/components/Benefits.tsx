@@ -7,7 +7,7 @@ const Benefits = () => {
     {
       icon: <Heart className="w-12 h-12 text-blue-800 mb-4" />,
       title: "Saúde Integral",
-      description: "Planos completos que unem saúde e bem-estar para transformar seu dia a dia."
+      description: "Planos completos que unem saúde e bem-estar fisico para transformar seu dia a dia."
     },
     {
       icon: <Award className="w-12 h-12 text-blue-800 mb-4" />,
