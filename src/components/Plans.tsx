@@ -1,16 +1,17 @@
-'use client'
-import React, { useState } from 'react';
-import { CheckCircle, XCircle } from 'lucide-react';
-import SectionTitle from './SectionTitle';
+"use client";
+import React, { useState } from "react";
+import { CheckCircle, XCircle } from "lucide-react";
+import SectionTitle from "./SectionTitle";
 
 const Plans = () => {
   const [isAnnual, setIsAnnual] = useState(false);
-  
+
   const plans = [
     {
       name: "Plano Essencial",
       price: isAnnual ? 90 : 100,
-      description: "Ideal para quem busca os benefícios essenciais da atividade física.",
+      description:
+        "Ideal para quem busca os benefícios essenciais da atividade física.",
       features: [
         { name: "Acesso 4/semana", included: true },
         { name: "Acompanhamento de instrutores", included: true },
@@ -19,12 +20,13 @@ const Plans = () => {
         { name: "Avaliação física", included: false },
       ],
       highlight: false,
-      cta: "Escolher Plano"
+      cta: "Escolher Plano",
     },
     {
       name: "Plano Fit",
       price: isAnnual ? 99 : 110,
-      description: "Perfeito para quem quer acompanhamento personalizado e resultados eficientes.",
+      description:
+        "Perfeito para quem quer acompanhamento personalizado e resultados eficientes.",
       features: [
         { name: "Acesso ilimitado", included: true },
         { name: "Acompanhamento de instrutores", included: true },
@@ -33,12 +35,13 @@ const Plans = () => {
         { name: "Avaliação física", included: false },
       ],
       highlight: true,
-      cta: "Escolher Plano"
+      cta: "Escolher Plano",
     },
     {
       name: "Plano Premium",
       price: isAnnual ? 145 : 160,
-      description: "A experiência completa para maximizar seus resultados e transformação.",
+      description:
+        "A experiência completa para maximizar seus resultados e transformação.",
       features: [
         { name: "Acesso ilimitado", included: true },
         { name: "Acompanhamento de instrutores", included: true },
@@ -47,23 +50,26 @@ const Plans = () => {
         { name: "Avaliação física mensal", included: true },
       ],
       highlight: false,
-      cta: "Escolher Plano"
-    }
+      cta: "Escolher Plano",
+    },
   ];
 
   return (
-    <section id="planos" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <section
+      id="planos"
+      className="py-20 bg-gradient-to-b from-gray-900 to-black"
+    >
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Planos que cabem no seu bolso"
           subtitle="Escolha o plano ideal para seus objetivos e necessidades"
         />
-        
+
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800 p-1 rounded-full inline-flex">
             <button
               className={`px-6 py-2 rounded-full transition-all ${
-                !isAnnual ? 'bg-blue-800 text-white' : 'text-gray-300'
+                !isAnnual ? "bg-blue-800 text-white" : "text-gray-300"
               }`}
               onClick={() => setIsAnnual(false)}
             >
@@ -71,7 +77,7 @@ const Plans = () => {
             </button>
             <button
               className={`px-6 py-2 rounded-full transition-all ${
-                isAnnual ? 'bg-blue-800 text-white' : 'text-gray-300'
+                isAnnual ? "bg-blue-800 text-white" : "text-gray-300"
               }`}
               onClick={() => setIsAnnual(true)}
             >
@@ -79,15 +85,15 @@ const Plans = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`rounded-2xl overflow-hidden ${
-                plan.highlight 
-                  ? 'bg-blue-900 transform scale-105' 
-                  : 'bg-gray-800 hover:bg-gray-700'
+                plan.highlight
+                  ? "bg-blue-900 transform scale-105"
+                  : "bg-gray-800 hover:bg-gray-700"
               } transition-all duration-300 flex flex-col`}
             >
               {plan.highlight && (
@@ -110,18 +116,22 @@ const Plans = () => {
                       ) : (
                         <XCircle className="text-gray-500 mr-2 h-5 w-5" />
                       )}
-                      <span className={feature.included ? 'text-white' : 'text-gray-400'}>
+                      <span
+                        className={
+                          feature.included ? "text-white" : "text-gray-400"
+                        }
+                      >
                         {feature.name}
                       </span>
                     </li>
                   ))}
                 </ul>
-                <a 
-                  href="#contato" 
+                <a
+                  href="#contato"
                   className={`block text-center py-3 px-6 rounded-full font-semibold transition-all ${
-                    plan.highlight 
-                      ? 'bg-white text-blue-900 hover:bg-gray-200' 
-                      : 'bg-blue-800 text-white hover:bg-blue-900'
+                    plan.highlight
+                      ? "bg-white text-blue-900 hover:bg-gray-200"
+                      : "bg-blue-800 text-white hover:bg-blue-900"
                   }`}
                 >
                   {plan.cta}
@@ -130,16 +140,19 @@ const Plans = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 p-6 bg-gray-800 rounded-xl mx-auto max-w-2xl">
-          <h3 className="text-xl font-bold mb-4 text-center">Avaliação Física Avulsa</h3>
+          <h3 className="text-xl font-bold mb-4 text-center">
+            Avaliação Física Avulsa
+          </h3>
           <p className="text-gray-300 text-center mb-4">
-            Disponível também para não-matriculados, nossa avaliação física completa identifica seu perfil e necessidades específicas.
+            Disponível também para não-matriculados, nossa avaliação física
+            completa identifica seu perfil e necessidades específicas.
           </p>
           <div className="text-center font-bold text-2xl mb-4">R$ 50,00</div>
           <div className="text-center">
-            <a 
-              href="#contato" 
+            <a
+              href="https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20na%20Cris%20Academia"
               className="inline-block bg-blue-800 hover:bg-blue-900 text-white py-3 px-8 rounded-full font-medium transition-all duration-300"
             >
               Agendar Avaliação

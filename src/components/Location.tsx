@@ -1,16 +1,19 @@
-import React from 'react';
-import SectionTitle from './SectionTitle';
-import { MapPin, Clock, Phone } from 'lucide-react';
+import React from "react";
+import SectionTitle from "./SectionTitle";
+import { MapPin, Clock, Phone } from "lucide-react";
 
 const Location = () => {
   return (
-    <section id="contato" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <section
+      id="contato"
+      className="py-20 bg-gradient-to-b from-gray-900 to-black"
+    >
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Localização e Contato"
           subtitle="Estamos bem localizados no centro da cidade, com fácil acesso"
         />
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
           <div className="bg-gray-800 rounded-lg overflow-hidden h-96">
             <iframe
@@ -24,41 +27,45 @@ const Location = () => {
               title="Localização da Cris Academia"
             />
           </div>
-          
+
           <div className="bg-gray-800 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-6">Entre em Contato</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="flex items-start">
                 <MapPin className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold mb-1">Endereço</h4>
                   <p className="text-gray-300">
-                    Avenida Floriano Peixoto, 457<br />
+                    Avenida Floriano Peixoto, 457
+                    <br />
                     Centro, Portel-PA
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <Clock className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold mb-1">Horário de Funcionamento</h4>
+                  <h4 className="font-semibold mb-1">
+                    Horário de Funcionamento
+                  </h4>
                   <p className="text-gray-300">
-                    Segunda a Sexta<br />
+                    Segunda a Sexta
+                    <br />
                     06h00 às 20h30
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <Phone className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold mb-1">WhatsApp</h4>
                   <p className="text-gray-300">
-                    <a 
-                      href="https://wa.me/5591992543958" 
-                      target="_blank" 
+                    <a
+                      href="https://wa.me/5591992543958"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-blue-500 transition-colors"
                     >
@@ -68,8 +75,9 @@ const Location = () => {
                 </div>
               </div>
             </div>
-            
-            <form className="space-y-4">
+
+            {/**
+             * <form className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-1">
                   Nome
@@ -113,6 +121,7 @@ const Location = () => {
                 Enviar Mensagem
               </button>
             </form>
+             */}
           </div>
         </div>
       </div>
