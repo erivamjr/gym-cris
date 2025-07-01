@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://crisacademia.netlify.app/sitemap.xml 
