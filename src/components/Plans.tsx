@@ -127,7 +127,11 @@ const Plans = () => {
                   ))}
                 </ul>
                 <a
-                  href="#contato"
+                  href={`https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20${encodeURIComponent(
+                    plan.name
+                  )}%20na%20Cris%20Academia!`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`block text-center py-3 px-6 rounded-full font-semibold transition-all ${
                     plan.highlight
                       ? "bg-white text-blue-900 hover:bg-gray-200"
@@ -152,7 +156,9 @@ const Plans = () => {
           <div className="text-center font-bold text-2xl mb-4">R$ 50,00</div>
           <div className="text-center">
             <a
-              href="https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20na%20Cris%20Academia"
+              href="https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20na%20Cris%20Academia!"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-blue-800 hover:bg-blue-900 text-white py-3 px-8 rounded-full font-medium transition-all duration-300"
             >
               Agendar Avaliação
