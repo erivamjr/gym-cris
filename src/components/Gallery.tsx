@@ -4,7 +4,11 @@ import React, { useState } from "react";
 import SectionTitle from "./SectionTitle";
 import { X } from "lucide-react";
 import hallEntrada from "../assets/hall-de-entrada.webp";
-import aparelhos from "../assets/aparelhos.webp";
+import salaDeMusculacaoPesada from "../assets/area_musculacao_pesada.webp";
+import espacoTecnicoComEspelhos from "../assets/espaco_tecnico_com_espelhos.webp";
+import espacoParaSupino from "../assets/espaco_para_supino.webp";
+import areaDeAlongamento from "../assets/area_alongamento.webp";
+import areaDeMusculacaoGeral from "../assets/area_musculacao_geral.webp";
 import Image, { type StaticImageData } from "next/image";
 
 const Gallery = () => {
@@ -19,29 +23,29 @@ const Gallery = () => {
       title: "Recepção",
     },
     {
-      src: aparelhos,
-      alt: "Sala de musculação da Cris Academia",
-      title: "Sala de Musculação",
+      src: salaDeMusculacaoPesada,
+      alt: "Área de musculação inferior da Cris Academia",
+      title: "Área de Musculação Inferior",
     },
     {
-      src: "https://images.pexels.com/photos/4162487/pexels-photo-4162487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Área de cardio da Cris Academia",
-      title: "Área de Cardio",
+      src: espacoTecnicoComEspelhos,
+      alt: "Espaço técnico com espelhos da Cris Academia",
+      title: "Espaço Técnico com Espelhos",
     },
     {
-      src: "https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Vestiários da Cris Academia",
-      title: "Vestiários",
+      src: espacoParaSupino,
+      alt: "Espaço para supino da Cris Academia",
+      title: "Espaço para Supino",
     },
     {
-      src: "https://images.pexels.com/photos/917653/pexels-photo-917653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Área de estiramento da Cris Academia",
+      src: areaDeAlongamento,
+      alt: "Área de alongamento da Cris Academia",
       title: "Área de Alongamento",
     },
     {
-      src: "https://images.pexels.com/photos/260409/pexels-photo-260409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Sala de avaliação da Cris Academia",
-      title: "Sala de Avaliação",
+      src: areaDeMusculacaoGeral,
+      alt: "Area de Musculação Geral da Cris Academia",
+      title: "Area de Musculação Geral",
     },
   ];
 
