@@ -7,7 +7,7 @@ import hallEntrada from "../assets/hall-de-entrada.webp";
 import salaDeMusculacaoPesada from "../assets/area_musculacao_pesada.webp";
 import espacoTecnicoComEspelhos from "../assets/espaco_tecnico_com_espelhos.webp";
 import espacoParaSupino from "../assets/espaco_para_supino.webp";
-import areaDeAlongamento from "../assets/area_alongamento.webp";
+import areaDeAlongamento from "../assets/area_alongamento1.webp";
 import areaDeMusculacaoGeral from "../assets/area_musculacao_geral.webp";
 import Image, { type StaticImageData } from "next/image";
 
