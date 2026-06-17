@@ -7,6 +7,7 @@ import ShareLinksButton from "./ShareLinksButton";
 
 const homeUrl = "/";
 const publicSiteUrl = "https://crisacademia.netlify.app";
+const previewImage = `${publicSiteUrl}/og-preview.jpg`;
 const instagramUrl = "https://instagram.com/_crisacademia";
 const whatsappUrl =
   "https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Cris%20Academia";
@@ -25,11 +26,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${publicSiteUrl}/logo1.png`,
+        url: previewImage,
         width: 1200,
         height: 630,
         alt: "Cris Academia",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     title: "Cris Academia",
     description:
       "Acesse o site, Instagram e WhatsApp da Cris Academia em Portel-PA.",
-    images: [`${publicSiteUrl}/logo1.png`],
+    images: [previewImage],
   },
 };
 
