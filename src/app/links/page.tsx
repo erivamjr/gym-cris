@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Globe2, MapPin } from "lucide-react";
 import gymPhoto from "@/assets/vista_panoramica.webp";
 import crisPhoto from "@/assets/cris.png";
+import ShareLinksButton from "./ShareLinksButton";
 
 const homeUrl = "/";
 const publicSiteUrl = "https://crisacademia.netlify.app";
@@ -180,6 +181,8 @@ export default function LinksPage() {
               );
             })}
           </div>
+
+          <ShareLinksButton />
 
           <div className="mt-8 flex items-center justify-center gap-2 text-sm text-gray-300">
             <MapPin className="h-4 w-4 text-blue-400" aria-hidden="true" />

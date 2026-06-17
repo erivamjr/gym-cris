@@ -5,6 +5,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const siteUrl = "https://crisacademia.netlify.app";
+const previewImage = `${siteUrl}/logo1.png`;
 const title = "Cris Academia | Transformando Saúde em Movimento";
 const description =
   "Cris Academia – Academia com foco em saúde integral, estética e reabilitação em Portel-PA.";
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}/logo.png`, // coloque em /public
+        url: previewImage,
         width: 1200,
         height: 630,
         alt: "Logo da Cris Academia",
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
     description,
     site: "@crisacademia", // ajuste se houver @ real
     creator: "@crisacademia",
-    images: [`${siteUrl}/logo.png`],
+    images: [previewImage],
   },
   authors: [{ name: "Cris Academia", url: siteUrl }],
   publisher: "Cris Academia",
