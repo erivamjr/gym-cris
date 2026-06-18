@@ -146,7 +146,7 @@ const Footer = () => {
           <p className="text-center text-gray-500">
             Desenvolvido com 💻 e ☕ por{" "}
             <a
-              href="https://erivam.vercel.app/"
+              href="https://erivam.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
