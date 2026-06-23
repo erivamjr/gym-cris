@@ -27,7 +27,7 @@ const ShareLinksButton = () => {
     <button
       type="button"
       onClick={handleShare}
-      className="mt-4 flex min-h-[58px] w-full items-center justify-center gap-3 rounded-lg border border-white/15 bg-white/10 px-5 py-3 text-base font-semibold text-white shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:shadow-xl"
+      className="mt-4 flex min-h-[58px] w-full items-center justify-center gap-3 rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-base font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:shadow-xl"
     >
       {copied ? (
         <Check className="h-5 w-5 text-green-400" aria-hidden="true" />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Globe2, MapPin } from "lucide-react";
+import { Dumbbell, Globe2, MapPin, Sparkles } from "lucide-react";
+import facadePhoto from "@/assets/boa_forma.webp";
 import gymPhoto from "@/assets/vista_panoramica.webp";
 import crisPhoto from "@/assets/cris.png";
 import ShareLinksButton from "./ShareLinksButton";
@@ -10,7 +11,7 @@ const publicSiteUrl = "https://crisacademia.netlify.app";
 const previewImage = `${publicSiteUrl}/og-preview.jpg`;
 const instagramUrl = "https://instagram.com/_crisacademia";
 const whatsappUrl =
-  "https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Cris%20Academia";
+  "https://wa.me/5591992543958?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20Cris%20Academia";
 
 export const metadata: Metadata = {
   title: "Links | Cris Academia",
@@ -113,81 +114,121 @@ const links = [
 
 export default function LinksPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+    <main className="relative min-h-screen overflow-hidden bg-[#050607] text-white">
       <Image
         src={gymPhoto}
         alt=""
         fill
         priority
-        className="object-cover opacity-25"
+        className="object-cover opacity-20 blur-[1px] saturate-75"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-gray-950/90 to-black" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(66,153,225,0.28),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0.72),rgba(4,7,10,0.94)_48%,#050607)]" />
+      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-sky-500/20 to-transparent" />
 
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-4 py-10">
-        <div className="w-full max-w-md">
-          <div className="mb-8 text-center">
-            <div className="mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full border-4 border-blue-500/70 bg-gray-900 shadow-2xl shadow-blue-950/50">
+      <section className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8 sm:py-10">
+        <div className="grid w-full max-w-5xl items-center gap-6 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/50">
+            <div className="relative aspect-[4/3] min-h-[420px] sm:aspect-[16/11] lg:min-h-[620px]">
               <Image
-                src={crisPhoto}
-                alt="Cris Marques"
-                width={180}
-                height={180}
-                className="h-full w-full object-cover object-[center_-6%]"
+                src={facadePhoto}
+                alt="Fachada da Cris Academia"
+                fill
                 priority
+                className="object-cover object-[center_42%]"
+                sizes="(min-width: 1024px) 54vw, 100vw"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-sky-400/10" />
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-lg backdrop-blur-md">
+                  <Sparkles
+                    className="h-4 w-4 text-amber-300"
+                    aria-hidden="true"
+                  />
+                  Portel-PA
+                </div>
+                <h2 className="max-w-xl text-4xl font-black leading-none text-white drop-shadow-xl sm:text-5xl lg:text-6xl">
+                  Cris Academia
+                </h2>
+                <p className="mt-3 max-w-md text-base font-medium leading-relaxed text-white/88 sm:text-lg">
+                  Um espaço moderno para treinar, cuidar da saúde e se sentir
+                  em casa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full rounded-[1.75rem] border border-white/10 bg-black/[0.52] p-5 shadow-2xl shadow-black/45 backdrop-blur-xl sm:p-7 lg:p-8">
+            <div className="mb-7 flex items-center gap-4">
+              <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-full border-4 border-white/15 bg-gray-900 shadow-xl shadow-black/40 sm:h-28 sm:w-28">
+                <Image
+                  src={crisPhoto}
+                  alt="Cris Marques"
+                  width={180}
+                  height={180}
+                  className="h-full w-full object-cover object-[center_-6%]"
+                  priority
+                />
+              </div>
+
+              <div className="min-w-0">
+                <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-sky-400/12 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-200">
+                  <Dumbbell className="h-3.5 w-3.5" aria-hidden="true" />
+                  Links oficiais
+                </div>
+                <h1 className="text-3xl font-black leading-tight text-white sm:text-4xl">
+                  Viver é Presente!
+                </h1>
+              </div>
             </div>
 
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.22em] text-blue-400">
-              Cris Academia
-            </p>
-            <h1 className="text-3xl font-bold leading-tight md:text-4xl">
-              Viver é Presente!
-            </h1>
-            <p className="mx-auto mt-3 max-w-sm text-base leading-relaxed text-gray-300">
+            <p className="mb-6 text-base leading-relaxed text-gray-200">
               Saúde, movimento e bem-estar em um ambiente acolhedor para todas
               as idades.
             </p>
-          </div>
 
-          <div className="space-y-4">
-            {links.map((link) => {
-              const Icon = link.icon;
+            <div className="space-y-3.5">
+              {links.map((link) => {
+                const Icon = link.icon;
 
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group flex min-h-[84px] items-center gap-4 rounded-lg border px-5 py-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${link.className}`}
-                >
-                  <span
-                    className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full shadow-sm ${link.iconWrapperClassName}`}
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group flex min-h-[82px] items-center gap-4 rounded-xl border px-5 py-4 shadow-lg shadow-black/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${link.className}`}
                   >
-                    <Icon
-                      className={`h-7 w-7 ${link.iconClassName}`}
-                      aria-hidden="true"
-                    />
-                  </span>
-                  <span className="min-w-0 text-left">
-                    <span className="block text-lg font-bold leading-tight">
-                      {link.label}
+                    <span
+                      className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full shadow-sm ${link.iconWrapperClassName}`}
+                    >
+                      <Icon
+                        className={`h-7 w-7 ${link.iconClassName}`}
+                        aria-hidden="true"
+                      />
                     </span>
-                    <span className="mt-1 block text-sm leading-snug text-white/85">
-                      {link.description}
+                    <span className="min-w-0 text-left">
+                      <span className="block text-lg font-bold leading-tight">
+                        {link.label}
+                      </span>
+                      <span className="mt-1 block text-sm leading-snug text-white/85">
+                        {link.description}
+                      </span>
                     </span>
-                  </span>
-                </a>
-              );
-            })}
-          </div>
+                  </a>
+                );
+              })}
+            </div>
 
-          <ShareLinksButton />
+            <ShareLinksButton />
 
-          <div className="mt-8 flex items-center justify-center gap-2 text-sm text-gray-300">
-            <MapPin className="h-4 w-4 text-blue-400" aria-hidden="true" />
-            <span>Av. Floriano Peixoto, 457 - Centro, Portel-PA</span>
+            <div className="mt-7 flex items-start justify-center gap-2 text-center text-sm leading-relaxed text-gray-300">
+              <MapPin
+                className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-300"
+                aria-hidden="true"
+              />
+              <span>Av. Floriano Peixoto, 457 - Centro, Portel-PA</span>
+            </div>
           </div>
         </div>
       </section>
