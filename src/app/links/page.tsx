@@ -129,28 +129,28 @@ export default function LinksPage() {
       <section className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8 sm:py-10">
         <div className="grid w-full max-w-5xl items-center gap-6 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)]">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/50">
-            <div className="relative aspect-[4/3] min-h-[420px] sm:aspect-[16/11] lg:min-h-[620px]">
+            <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
               <Image
                 src={facadePhoto}
                 alt="Fachada da Cris Academia"
                 fill
                 priority
-                className="object-cover object-[center_42%]"
+                className="object-cover object-center"
                 sizes="(min-width: 1024px) 54vw, 100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-sky-400/10" />
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-lg backdrop-blur-md">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-sky-400/10" />
+              <div className="absolute inset-x-0 bottom-0 min-w-0 p-4 sm:p-7">
+                <div className="mb-3 inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-lg backdrop-blur-md sm:mb-4">
                   <Sparkles
                     className="h-4 w-4 text-amber-300"
                     aria-hidden="true"
                   />
                   Portel-PA
                 </div>
-                <h2 className="max-w-xl text-4xl font-black leading-none text-white drop-shadow-xl sm:text-5xl lg:text-6xl">
+                <h2 className="max-w-full break-words text-[clamp(2rem,9vw,4rem)] font-black leading-none text-white drop-shadow-xl">
                   Cris Academia
                 </h2>
-                <p className="mt-3 max-w-md text-base font-medium leading-relaxed text-white/88 sm:text-lg">
+                <p className="mt-2 max-w-[min(100%,30rem)] text-[clamp(0.9rem,3.6vw,1.125rem)] font-medium leading-snug text-white/88 sm:mt-3 sm:leading-relaxed">
                   Um espaço moderno para treinar, cuidar da saúde e se sentir
                   em casa.
                 </p>
