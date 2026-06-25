@@ -20,8 +20,8 @@ const Team = () => {
             <Image
               src={cris}
               alt="Cris Marques"
-              width={520}
-              height={680}
+              width={420}
+              height={550}
               className="h-full w-full object-cover"
             />
           </div>
