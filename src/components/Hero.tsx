@@ -17,7 +17,7 @@ const Hero = () => {
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/40 to-black/65 md:from-black/75 md:via-black/70 md:to-black/90" />
 
       <div className="container relative z-10 mx-auto px-4 text-center">
         <div className="animate-[fadeInUp_700ms_ease-out_both]">
