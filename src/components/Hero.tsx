@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className="mb-4 text-4xl font-bold md:text-6xl">
             Cris Academia
           </h1>
-          <p className="mb-6 text-2xl font-semibold italic text-blue-500 md:text-4xl">
+          <p className="mb-6 text-2xl font-semibold italic text-white md:text-4xl animate-pulse">
             "Viver é Presente!"
           </p>
           <h2 className="mb-6 text-2xl font-light md:text-4xl">
