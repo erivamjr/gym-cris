@@ -1,6 +1,16 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { href: "#inicio", label: "Início" },
+  { href: "#beneficios", label: "Benefícios" },
+  { href: "#planos", label: "Planos" },
+  { href: "#sobre", label: "Sobre" },
+  { href: "#contato", label: "Contato" },
+];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -8,127 +18,82 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed z-50 w-full transition-all duration-300 ${
         isScrolled ? "bg-black/90 shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <img
-            src="https://i.imgur.com/tE0WPN4.png"
+      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <a href="#inicio" className="flex items-center" aria-label="Cris Academia">
+          <Image
+            src="/logo-banner.png"
             alt="Cris Academia"
-            className="h-8 md:h-12"
+            width={150}
+            height={96}
+            className="h-10 w-auto md:h-12"
           />
-        </div>
+        </a>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
-          <a href="#inicio" className="hover:text-blue-800 transition-colors">
-            Início
-          </a>
-          <a
-            href="#beneficios"
-            className="hover:text-blue-800 transition-colors"
-          >
-            Benefícios
-          </a>
-          <a href="#planos" className="hover:text-blue-800 transition-colors">
-            Planos
-          </a>
-          <a href="#equipe" className="hover:text-blue-800 transition-colors">
-            Equipe
-          </a>
-          {/*<a href="#depoimentos" className="hover:text-blue-800 transition-colors">Depoimentos</a>*/}
-          <a href="#contato" className="hover:text-blue-800 transition-colors">
-            Contato
-          </a>
+        <nav className="hidden space-x-8 md:flex" aria-label="Menu principal">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:text-blue-500 transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
 
-        {/* CTA Button */}
         <a
           href="#planos"
-          className="hidden md:block bg-blue-800 hover:bg-blue-900 text-white py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
+          className="hidden rounded-full bg-blue-800 px-6 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-blue-900 md:block"
         >
           Matricule-se Já
         </a>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="text-white md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 bg-black/95 transition-all duration-300 ease-in-out transform ${
+        className={`fixed inset-0 bg-black/95 transition-all duration-300 ease-in-out md:hidden ${
           mobileMenuOpen
             ? "translate-x-0 opacity-100"
             : "translate-x-full opacity-0"
         }`}
         style={{ top: "62px" }}
       >
-        <nav className="flex flex-col space-y-4 p-4">
-          <a
-            href="#inicio"
-            className="text-white hover:text-blue-800 transition-colors text-lg"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Início
-          </a>
-          <a
-            href="#beneficios"
-            className="text-white hover:text-blue-800 transition-colors text-lg"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Benefícios
-          </a>
+        <nav className="flex flex-col space-y-4 p-4" aria-label="Menu mobile">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-lg text-white transition-colors hover:text-blue-500"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
           <a
             href="#planos"
-            className="text-white hover:text-blue-800 transition-colors text-lg"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Planos
-          </a>
-          <a
-            href="#equipe"
-            className="text-white hover:text-blue-800 transition-colors text-lg"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Equipe
-          </a>
-          {/*<a
-            href="#depoimentos"
-            className="text-white hover:text-blue-800 transition-colors text-lg"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Depoimentos
-          </a>*/}
-          <a
-            href="#contato"
-            className="text-white hover:text-blue-800 transition-colors text-lg"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Contato
-          </a>
-          <a
-            href="#planos"
-            className="bg-blue-800 hover:bg-blue-900 text-white py-3 px-6 rounded-full text-center transition-colors text-lg"
+            className="rounded-full bg-blue-800 px-6 py-3 text-center text-lg text-white transition-colors hover:bg-blue-900"
             onClick={() => setMobileMenuOpen(false)}
           >
             Matricule-se Já

@@ -1,47 +1,60 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const siteUrl = "https://crisacademia.netlify.app";
 const previewImage = `${siteUrl}/og-preview.jpg`;
-const title = "Cris Academia | Transformando Saúde em Movimento";
+const title = "Cris Academia em Portel-PA | Saúde, Musculação e Bem-Estar";
 const description =
-  "Cris Academia – Academia com foco em saúde integral, estética e reabilitação em Portel-PA.";
+  "Cris Academia em Portel-PA: treinos acompanhados, musculação, saúde integral, reabilitação, bem-estar e atendimento para diferentes idades e objetivos.";
 
 export const metadata: Metadata = {
-  title,
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | Cris Academia",
+  },
   description,
+  applicationName: "Cris Academia",
+  category: "Fitness",
   keywords: [
-    "academia",
-    "Portel",
-    "saúde",
-    "musculação",
-    "treinamento",
-    "personal trainer",
-    "reabilitação",
-    "exercício",
-    "bem-estar",
     "Cris Academia",
-    "pilates",
-    "cardio",
+    "academia em Portel",
+    "academia Portel PA",
+    "musculação em Portel",
+    "treino acompanhado",
+    "saúde integral",
+    "reabilitação física",
+    "atividade física",
+    "bem-estar",
     "emagrecimento",
     "hipertrofia",
-    "atividade física",
-    "personalizado",
     "avaliação física",
-    "profissionais",
     "Portel-PA",
   ],
-
-  // favicon / ícones
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
-
-  // Open Graph (WhatsApp, Facebook, etc)
   openGraph: {
     title,
     description,
@@ -54,7 +67,7 @@ export const metadata: Metadata = {
         url: previewImage,
         width: 1200,
         height: 630,
-        alt: "Logo da Cris Academia",
+        alt: "Cris Academia em Portel-PA",
         type: "image/jpeg",
       },
     ],
@@ -63,8 +76,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    site: "@crisacademia", // ajuste se houver @ real
-    creator: "@crisacademia",
+    site: "@_crisacademia",
+    creator: "@_crisacademia",
     images: [previewImage],
   },
   authors: [{ name: "Cris Academia", url: siteUrl }],

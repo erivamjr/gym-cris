@@ -2,14 +2,18 @@
 import React, { useState } from "react";
 import { CheckCircle, XCircle } from "lucide-react";
 import SectionTitle from "./SectionTitle";
+import { formatCurrency } from "../utils/functions";
 
 const Plans = () => {
   const [isAnnual, setIsAnnual] = useState(false);
+  const essencialPlan = 105;
+  const fitPlan = 110;
+  const premiumPlan = 165;
 
   const plans = [
     {
       name: "Plano Essencial",
-      price: isAnnual ? 90 : 100,
+      price: isAnnual ? essencialPlan * 0.9 : essencialPlan,
       description:
         "Ideal para quem busca os benefícios essenciais da atividade física.",
       features: [
@@ -24,7 +28,7 @@ const Plans = () => {
     },
     {
       name: "Plano Fit",
-      price: isAnnual ? 99 : 110,
+      price: isAnnual ? fitPlan * 0.9 : fitPlan,
       description:
         "Perfeito para quem quer acompanhamento personalizado e resultados eficientes.",
       features: [
@@ -39,7 +43,7 @@ const Plans = () => {
     },
     {
       name: "Plano Premium",
-      price: isAnnual ? 145 : 160,
+      price: isAnnual ? premiumPlan * 0.9 : premiumPlan,
       description:
         "A experiência completa para maximizar seus resultados e transformação.",
       features: [
@@ -105,7 +109,7 @@ const Plans = () => {
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">R$ {plan.price},00</span>
+                  <span className="text-4xl font-bold">{formatCurrency(plan.price)}</span>
                   <span className="text-gray-300">/mês</span>
                 </div>
                 <ul className="space-y-4 mb-8 flex-grow">
@@ -153,7 +157,7 @@ const Plans = () => {
             Disponível também para não-matriculados, nossa avaliação física
             completa identifica seu perfil e necessidades específicas.
           </p>
-          <div className="text-center font-bold text-2xl mb-4">R$ 50,00</div>
+          <div className="text-center font-bold text-2xl mb-4">R$ 70,00</div>
           <div className="text-center">
             <a
               href="https://wa.me/5591992543958?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20na%20Cris%20Academia!"

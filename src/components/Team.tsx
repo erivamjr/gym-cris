@@ -6,13 +6,13 @@ import cris from "../assets/cris.png";
 const Team = () => {
   return (
     <section
-      id="equipe"
+      id="sobre"
       className="py-20 bg-gradient-to-b from-black to-gray-900"
     >
       <div className="container mx-auto px-4">
         <SectionTitle
           title="Quem está por trás da Cris Academia"
-          subtitle="Há mais de 20 anos dedicando sua vida à saúde e ao bem-estar das pessoas"
+          subtitle="Mais de duas décadas transformando vidas através da ciência do exercício, da saúde e do cuidado individualizado."
         />
 
         <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
@@ -28,19 +28,34 @@ const Team = () => {
 
           <div className="text-lg leading-relaxed text-gray-300">
             <p className="mb-5">
-              A Cris Academia nasceu do compromisso de oferecer mais do que
-              treinos: um ambiente acolhedor, seguro e preparado para atender
-              pessoas de todas as idades e condições físicas.
+              À frente da Cris Academia está a Cristiane, 
+              profissional de Educação Física (CREF 005410-G/PA), 
+              apaixonada por promover saúde, qualidade de vida e 
+              bem-estar por meio do exercício físico.
             </p>
             <p className="mb-5">
-              Com experiência no acompanhamento de alunos que buscam desde
-              qualidade de vida até recuperação física e melhora da autoestima,
-              Cris acredita que cada pessoa possui uma jornada única e merece um
-              atendimento individualizado.
+              Com uma trajetória de mais de duas décadas de experiência 
+              e constante aperfeiçoamento profissional, possui especialização 
+              em Musculação Avançada, Avaliação e Prescrição de Exercícios para
+               Grupos Especiais, Pós-Graduação em Alta Performance em 
+               Prescrição de Treinos e Exercícios – Hipertrofia, Saúde e Emagrecimento, 
+               além de capacitação em Biomecânica Aplicada ao Treinamento de Força pela USP.
             </p>
-            <p>
-              Seu propósito é ajudar cada aluno a conquistar mais saúde,
-              autonomia, confiança e bem-estar através do movimento.
+            <p className="mb-5">
+              Seu diferencial está no atendimento individualizado. 
+              Cada treino é cuidadosamente planejado de acordo com os objetivos, limitações e 
+              necessidades de cada aluno, oferecendo segurança tanto para quem busca 
+              emagrecimento, hipertrofia e condicionamento físico quanto para pessoas 
+              em processo de reabilitação, recuperação pós-cirúrgica, idosos e alunos 
+              com necessidades especiais.
+            </p>
+             <p>
+              Seu diferencial está no atendimento individualizado. 
+              Cada treino é cuidadosamente planejado de acordo com os objetivos, limitações e 
+              necessidades de cada aluno, oferecendo segurança tanto para quem busca 
+              emagrecimento, hipertrofia e condicionamento físico quanto para pessoas 
+              em processo de reabilitação, recuperação pós-cirúrgica, idosos e alunos 
+              com necessidades especiais.
             </p>
           </div>
         </div>

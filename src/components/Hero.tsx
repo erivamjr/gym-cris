@@ -1,63 +1,60 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
+import heroImage from "../assets/pesos.webp";
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center py-24"
-      style={{
-        backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url("https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-      }}
+      className="relative flex min-h-screen items-center justify-center overflow-hidden py-24"
     >
-      <div className="container mx-auto px-4 text-center">
-        <div
-          className={`transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-white">Cris Academia</span>
+      <Image
+        src={heroImage}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/90" />
+
+      <div className="container relative z-10 mx-auto px-4 text-center">
+        <div className="animate-[fadeInUp_700ms_ease-out_both]">
+          <h1 className="mb-4 text-4xl font-bold md:text-6xl">
+            Cris Academia
           </h1>
-          <h2 className="text-blue-500 font-semibold text-2xl md:text-4xl mb-6 italic animate-pulse">
+          <p className="mb-6 text-2xl font-semibold italic text-blue-500 md:text-4xl">
             "Viver é Presente!"
-          </h2>
-          <h2 className="text-2xl md:text-4xl font-light mb-6">
-            Corpo em{" "}
-            <span className="text-blue-500 font-semibold">Movimento</span>, vida
-            em{" "}
-            <span className="text-blue-500 font-semibold">Transformação</span>
-          </h2>
-          {/**Primeira academia da região com foco em saúde integral — combinando estética e reabilitação para todas as idades e condições físicas. */}
-          <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Pioneira na região em saúde integral, atendendo todas as idades e
-            condições físicas
           </p>
-          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-12">
+          <h2 className="mb-6 text-2xl font-light md:text-4xl">
+            Corpo em{" "}
+            <span className="font-semibold text-blue-500">Movimento</span>,
+            vida em{" "}
+            <span className="font-semibold text-blue-500">Transformação</span>
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300 md:text-xl">
+            Academia em Portel-PA com foco em saúde integral, treino
+            acompanhado e atendimento para diferentes idades e condições
+            físicas.
+          </p>
+          <div className="mb-12 flex flex-col justify-center gap-4 md:flex-row md:gap-6">
             <a
               href="#planos"
-              className="bg-blue-800 hover:bg-blue-900 text-white py-3 px-8 rounded-full font-medium text-lg transition-all duration-300 transform hover:scale-105"
+              className="rounded-full bg-blue-800 px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-blue-900"
             >
               Matricule-se Já!
             </a>
             <a
-              href="#planos"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black py-3 px-8 rounded-full font-medium text-lg transition-all duration-300"
+              href="#contato"
+              className="rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-white hover:text-black"
             >
               Agende sua Avaliação!
             </a>
           </div>
-          <div className="text-gray-400 flex justify-center items-center">
+          <div className="flex items-center justify-center text-gray-400">
             <p className="mr-2">Descubra mais</p>
-            <ChevronDown className="animate-bounce" />
+            <ChevronDown className="animate-bounce" aria-hidden="true" />
           </div>
         </div>
       </div>

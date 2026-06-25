@@ -79,6 +79,7 @@ const Gallery = () => {
                   alt={image.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   style={{ objectFit: "cover" }}
                 />
               )}
@@ -115,6 +116,7 @@ const Gallery = () => {
                   src={selectedImage}
                   alt="Imagem ampliada"
                   className="w-full h-auto max-h-[80vh] object-contain"
+                  sizes="100vw"
                   onClick={(e) => e.stopPropagation()}
                 />
               )}

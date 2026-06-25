@@ -1,5 +1,15 @@
 import React from "react";
+import Image from "next/image";
 import { Clock, Facebook, Instagram, MapPin, Phone } from "lucide-react";
+
+const footerLinks = [
+  { href: "#inicio", label: "Início" },
+  { href: "#beneficios", label: "Benefícios" },
+  { href: "#planos", label: "Planos" },
+  { href: "#sobre", label: "Sobre" },
+  { href: "#galeria", label: "Galeria" },
+  { href: "#faq", label: "FAQ" },
+];
 
 const Footer = () => {
   return (
@@ -7,25 +17,27 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <div className="flex items-center mb-6">
-              <img
-                src="https://i.imgur.com/tE0WPN4.png"
+            <div className="mb-6 flex items-center">
+              <Image
+                src="/logo-banner.png"
                 alt="Cris Academia"
-                className="h-8 md:h-12"
+                width={150}
+                height={96}
+                className="h-10 w-auto md:h-12"
               />
               <p>{" -"}</p>
               <span className="text-xl font-bold">{" Academia"}</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Transformando Saúde em Movimento. Primeira academia da região com
-              foco em saúde integral, estética e reabilitação.
+              Transformando Saúde em Movimento. Academia em Portel-PA com foco
+              em saúde integral, estética, bem-estar e reabilitação.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://instagram.com/_crisacademia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-500 transition-colors"
+                className="text-gray-400 transition-colors hover:text-blue-500"
                 aria-label="Instagram da Cris Academia"
               >
                 <Instagram />
@@ -34,7 +46,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-500 transition-colors"
+                className="text-gray-400 transition-colors hover:text-blue-500"
                 aria-label="Facebook da Cris Academia"
               >
                 <Facebook />
@@ -45,62 +57,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#inicio"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  Início
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#beneficios"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  Benefícios
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#planos"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  Planos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#equipe"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  Equipe
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#depoimentos"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  Depoimentos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#galeria"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  Galeria
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
-                >
-                  FAQ
-                </a>
-              </li>
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-gray-400 transition-colors hover:text-blue-500"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -121,7 +87,7 @@ const Footer = () => {
                   href="https://wa.me/5591992543958"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  className="text-gray-400 transition-colors hover:text-blue-500"
                 >
                   (91) 99254-3958
                 </a>
