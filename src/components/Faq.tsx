@@ -10,7 +10,7 @@ const Faq = () => {
   const faqs = [
     {
       question: "Quais dias e horários funciona a academia?",
-      answer: "Segunda a sexta, das 06h às 20h30."
+      answer: "Segunda a sexta, das 06h às 20h30 e aos sábados abri e 8h30 até às 12h."
     },
     {
       question: "Tem instrutor disponível?",
