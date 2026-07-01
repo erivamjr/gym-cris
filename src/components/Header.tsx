@@ -10,6 +10,7 @@ const navItems = [
   { href: "#planos", label: "Planos" },
   { href: "#sobre", label: "Sobre" },
   { href: "#contato", label: "Contato" },
+  { href: "#faq", label: "Faq" },
 ];
 
 const Header = () => {
